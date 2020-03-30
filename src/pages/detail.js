@@ -18,7 +18,7 @@ class Index extends React.Component {
   getFilm() {
     const { id } = this.props.match.params  
     axios
-      .get("http://omdbapi.com/?apikey=57f95c5c&i=" + id)
+      .get("https://omdbapi.com/?apikey=57f95c5c&i=" + id)
       .then(response =>
         response.data.Search.map(filmList => ({
           title: `${filmList.Title}`,
